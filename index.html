@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#111315" />
+        <meta
+            name="description"
+            content="Player guide, updates, and patch notes for the Jak and Daxter II Multiplayer mod for OpenGOAL."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Jak and Daxter II Multiplayer"
+        />
+        <meta
+            property="og:description"
+            content="How to host, join, and troubleshoot the Jak II two-player mod for OpenGOAL."
+        />
+        <meta property="og:image" content="images/jad2mp-title.png" />
+
+        <title>Jak and Daxter II Multiplayer</title>
+        <script>document.documentElement.classList.add("js");</script>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="updates.js" defer></script>
+        <script src="script.js" defer></script>
+        <link rel="icon" href="images/jad2mp-icon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to the guide</a>
+
+        <header class="site-header" data-header>
+            <div class="shell header-inner">
+                <a
+                    class="brand brand-logo"
+                    href="#top"
+                    aria-label="Jak and Daxter II Multiplayer home"
+                >
+                    <img
+                        src="images/jad2mp-icon.png"
+                        alt="Jak and Daxter II Multiplayer"
+                        class="header-logo"
+                    />
+                </a>
+
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-nav"
+                    data-nav-toggle
+                >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav
+                    class="site-nav"
+                    id="site-nav"
+                    aria-label="Main navigation"
+                    data-nav
+                >
+                    <a href="#updates">Updates</a>
+                    <a href="#before-playing">Before playing</a>
+                    <a href="#host">Host</a>
+                    <a href="#join">Join</a>
+                    <a href="#troubleshooting">Troubleshooting</a>
+                    <a
+                        href="https://github.com/himstan/Jak-And-Daxter-2-Multiplayer"
+                        target="_blank"
+                        rel="noreferrer"
+                        >GitHub <span aria-hidden="true">↗</span></a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section class="hero" id="top">
+                <div class="shell hero-layout">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Two-player mod for OpenGOAL</p>
+                        <img
+                            class="hero-logo"
+                            src="images/jad2mp-title.png"
+                            alt="Jak and Daxter II Multiplayer"
+                        />
+                        <h1 class="sr-only">Jak and Daxter II Multiplayer</h1>
+                        <p class="hero-intro">
+                            One player hosts as Jak and the other joins as
+                            Daxter. Here you can find information about starting
+                            a session, connecting over LAN or the internet, and
+                            fixing the most common problems.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button button--jak" href="#host"
+                                >Host as Jak</a
+                            >
+                            <a class="button button--daxter" href="#join"
+                                >Join as Daxter</a
+                            >
+                        </div>
+                    </div>
+
+                    <figure class="hero-image">
+                        <img
+                            src="images/palace-boss-baron-fight.png"
+                            alt="Jak and Daxter playing together in the multiplayer mod"
+                        />
+                        <figcaption>Currently playable: Act I</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="build-notice" aria-label="Early build notice">
+                <div class="shell build-notice-inner">
+                    <strong>Early build</strong>
+                    <p>
+                        The first release covers Act I, ending after the palace
+                        Baron boss fight. Bugs, crashes, desyncs, and unfinished
+                        behaviour should be expected.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section section--updates" id="updates">
+                <div class="shell">
+                    <div class="section-heading section-heading--split">
+                        <div>
+                            <p class="section-label">Mod updates</p>
+                            <h2>Versions and patch notes</h2>
+                        </div>
+                    </div>
+
+                    <h3 class="updates-subheading">Roadmap</h3>
+                    <div
+                        class="roadmap"
+                        data-roadmap
+                        aria-label="Release roadmap"
+                    ></div>
+
+                    <h3 class="updates-subheading">Release notes</h3>
+                    <div class="version-list" data-version-list></div>
+
+                    <noscript>
+                        <p class="empty-state">
+                            Enable JavaScript to view the version history.
+                        </p>
+                    </noscript>
+                </div>
+            </section>
+
+            <section class="section" id="before-playing">
+                <div class="shell">
+                    <div class="section-heading">
+                        <p class="section-label">Before playing</p>
+                        <h2>A few things to check first</h2>
+                        <p>
+                            The OpenGOAL launcher handles installation. Both
+                            players only need to make sure they are launching
+                            the same mod version.
+                        </p>
+                    </div>
+
+                    <div class="info-grid">
+                        <article class="info-card">
+                            <span class="info-number">1</span>
+                            <h3>Use the same version</h3>
+                            <p>
+                                Different versions may not connect or may behave
+                                differently during a session.
+                            </p>
+                        </article>
+
+                        <article class="info-card info-card--jak">
+                            <span class="role-dot" aria-hidden="true"></span>
+                            <h3>Jak hosts</h3>
+                            <p>
+                                The host owns the save and should trigger
+                                important mission and world events.
+                            </p>
+                        </article>
+
+                        <article class="info-card info-card--daxter">
+                            <span class="role-dot" aria-hidden="true"></span>
+                            <h3>Daxter joins</h3>
+                            <p>
+                                The second player connects through Find LAN or
+                                Direct Connect.
+                            </p>
+                        </article>
+
+                        <article class="info-card">
+                            <span class="info-number">2</span>
+                            <h3>Internet play may need setup</h3>
+                            <p>
+                                The host may need to allow OpenGOAL through
+                                Windows Firewall and forward the game port shown
+                                in the menu.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--role section--jak" id="host">
+                <div class="shell">
+                    <div class="section-heading section-heading--split">
+                        <div>
+                            <p class="section-label">Jak · Host</p>
+                            <h2>Host a game</h2>
+                        </div>
+                        <p>
+                            Choose the save, wait for Daxter to connect, then
+                            lead important mission interactions once the game
+                            starts.
+                        </p>
+                    </div>
+
+                    <ol class="steps">
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">1</span>
+                                <h3>Choose Host Game</h3>
+                                <p>
+                                    Start the mod and select
+                                    <strong>Host Game</strong> from the title
+                                    menu.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/host-host-game.png"
+                                data-caption="Select Host Game from the title menu"
+                            >
+                                <img
+                                    src="images/readme/host-host-game.png"
+                                    alt="Title menu with Host Game selected"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">2</span>
+                                <h3>Start a new game or load a save</h3>
+                                <p>
+                                    Choose <strong>New Game</strong> for a fresh
+                                    run, or <strong>Load Game</strong> to
+                                    continue an existing save.
+                                </p>
+                            </div>
+                            <div class="screenshot-pair">
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/host-new-game.png"
+                                    data-caption="Choose New Game or Load Game"
+                                >
+                                    <img
+                                        src="images/readme/host-new-game.png"
+                                        alt="Host Game menu showing New Game and Load Game"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/host-select-save.png"
+                                    data-caption="Select the save file to host"
+                                >
+                                    <img
+                                        src="images/readme/host-select-save.png"
+                                        alt="Host save selection menu"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">3</span>
+                                <h3>Wait for Daxter</h3>
+                                <p>
+                                    Stay on the host screen. The game continues
+                                    automatically after the second player
+                                    connects.
+                                </p>
+                                <p class="note">
+                                    For internet play, send the joining player
+                                    your public IP address and the port shown in
+                                    the host menu.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/host-waiting-for-daxter.png"
+                                data-caption="The host waits here until Daxter connects"
+                            >
+                                <img
+                                    src="images/readme/host-waiting-for-daxter.png"
+                                    alt="Host waiting for Daxter to connect"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section section--role section--daxter" id="join">
+                <div class="shell">
+                    <div class="section-heading section-heading--split">
+                        <div>
+                            <p class="section-label">Daxter · Join</p>
+                            <h2>Join a game</h2>
+                        </div>
+                        <p>
+                            Use Find LAN when both players are on the same
+                            network. Otherwise, connect directly with the host's
+                            address.
+                        </p>
+                    </div>
+
+                    <ol class="steps">
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">1</span>
+                                <h3>Choose Join Game</h3>
+                                <p>
+                                    Start the same mod version as the host and
+                                    select <strong>Join Game</strong>.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-join-game.png"
+                                data-caption="Select Join Game from the title menu"
+                            >
+                                <img
+                                    src="images/readme/client-join-game.png"
+                                    alt="Title menu with Join Game selected"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">2</span>
+                                <h3>Try Find LAN</h3>
+                                <p>
+                                    When both players are on the same local
+                                    network, choose
+                                    <strong>Find LAN</strong> and select the
+                                    host.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-find-lan.png"
+                                data-caption="Use Find LAN on the same local network"
+                            >
+                                <img
+                                    src="images/readme/client-find-lan.png"
+                                    alt="Join Game menu with Find LAN selected"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">3</span>
+                                <h3>Use Direct Connect</h3>
+                                <p>
+                                    If LAN discovery does not find the game,
+                                    choose <strong>Direct Connect</strong> and
+                                    enter the address and port provided by the
+                                    host.
+                                </p>
+                            </div>
+                            <div class="screenshot-pair">
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/client-direct-connect.png"
+                                    data-caption="Choose Direct Connect when LAN discovery is unavailable"
+                                >
+                                    <img
+                                        src="images/readme/client-direct-connect.png"
+                                        alt="Join Game menu with Direct Connect selected"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/client-connect-game.png"
+                                    data-caption="Enter the host address and port, then connect"
+                                >
+                                    <img
+                                        src="images/readme/client-connect-game.png"
+                                        alt="Direct Connect menu with Connect selected"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="address-guide">
+                        <div>
+                            <p class="section-label">Entering the address</p>
+                            <h3>Use the keyboard to type</h3>
+                            <p>
+                                Select the <strong>Address</strong> or
+                                <strong>Port</strong> field with
+                                <span
+                                    class="ps2-button"
+                                    role="img"
+                                    aria-label="the PlayStation 2 X button"
+                                >
+                                    <svg
+                                        viewBox="0 0 32 32"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <path
+                                            d="M8.5 5.7 16 13.2l7.5-7.5 2.8 2.8-7.5 7.5 7.5 7.5-2.8 2.8-7.5-7.5-7.5 7.5-2.8-2.8 7.5-7.5-7.5-7.5z"
+                                        />
+                                    </svg>
+                                </span>
+                                on a controller, or <kbd>Space</kbd> on a
+                                keyboard. Type the value, then press the same
+                                button again to finish editing.
+                            </p>
+                            <p class="note">
+                                An invalid IP address is shown in red.
+                            </p>
+                        </div>
+
+                        <div class="screenshot-pair">
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-valid-ip.png"
+                                data-caption="A correctly formatted IP address"
+                            >
+                                <img
+                                    src="images/readme/client-valid-ip.png"
+                                    alt="Direct Connect menu with a valid IP address entered"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-invalid-ip.png"
+                                data-caption="Invalid IP addresses are highlighted in red"
+                            >
+                                <img
+                                    src="images/readme/client-invalid-ip.png"
+                                    alt="Direct Connect menu showing an invalid IP address"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="local-play">
+                <div class="shell local-layout">
+                    <div aria-hidden="true">
+                        <div class="monitor-screen">
+                            <div class="game-window game-window--jak">
+                                <span>Jak</span>
+                            </div>
+                            <div class="game-window game-window--daxter">
+                                <span>Daxter</span>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                    </div>
+
+                    <div>
+                        <h2>Play "split-screen"</h2>
+                        <p>
+                            Run two windowed game instances side by side on the
+                            same monitor. Host in one window, then choose
+                            <strong>Join Game → Find LAN</strong> in the other.
+                        </p>
+                        <p>
+                            Each instance should recognize a connected
+                            controller. With only one controller, use the
+                            controller for one window and the keyboard for the
+                            other.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--muted" id="troubleshooting">
+                <div class="shell">
+                    <div class="section-heading">
+                        <p class="section-label">Troubleshooting</p>
+                        <h2>Quick fixes</h2>
+                    </div>
+
+                    <div class="troubleshooting-grid">
+                        <article
+                            class="troubleshooting-card troubleshooting-card--wide"
+                        >
+                            <div>
+                                <h3>Something looks broken for Daxter</h3>
+                                <p>
+                                    Use <strong>Reconnect</strong>. It is
+                                    currently the quickest fix for most
+                                    client-side desyncs, visual problems, and
+                                    soft-locks.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-reconnect.png"
+                                data-caption="Use Reconnect when the client becomes desynchronized"
+                            >
+                                <img
+                                    src="images/readme/client-reconnect.png"
+                                    alt="Reconnect button for the client"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </article>
+
+                        <article class="troubleshooting-card">
+                            <h3>Daxter cannot connect</h3>
+                            <ul>
+                                <li>
+                                    Make sure both players use the same mod
+                                    version.
+                                </li>
+                                <li>
+                                    Allow OpenGOAL through Windows Firewall on
+                                    the host PC.
+                                </li>
+                                <li>
+                                    For internet play, forward the port shown in
+                                    the game menu.
+                                </li>
+                                <li>
+                                    Check that the public IP address was entered
+                                    correctly.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="troubleshooting-card">
+                            <h3>The session ended</h3>
+                            <ul>
+                                <li>
+                                    If the host leaves, the session is over.
+                                </li>
+                                <li>Host the same save again.</li>
+                                <li>
+                                    Have Daxter reconnect using the same
+                                    address.
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="limitations">
+                <div class="shell">
+                    <div class="section-heading">
+                        <p class="section-label">Current build</p>
+                        <h2>Known limitations</h2>
+                        <p>
+                            These issues are expected in the first release and
+                            do not necessarily mean the connection was set up
+                            incorrectly.
+                        </p>
+                    </div>
+
+                    <div class="limitations-list">
+                        <details open>
+                            <summary>Remote animations</summary>
+                            <p>
+                                A remote player can miss an animation trigger.
+                                For example, a jump may look like a falling
+                                animation until the player lands.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Traffic handover</summary>
+                            <p>
+                                Traffic is mainly controlled by the host. When
+                                Daxter moves outside Jak's traffic radius, the
+                                client may briefly remove traffic before
+                                spawning it locally.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Client-side soft-locks</summary>
+                            <p>
+                                Reconnect is currently the main recovery option
+                                when the client enters a broken state.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Limited testing</summary>
+                            <p>
+                                The campaign has not been tested in every
+                                possible situation. Reproducible bugs and
+                                game-breaking issues can be reported on GitHub.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <section class="section section--compact support-section" id="report-bug">
+                <div class="shell">
+                    <div class="support-card">
+                        <div class="support-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" focusable="false">
+                                <path d="M23 15.5a9 9 0 0 1 18 0v3.1a15.5 15.5 0 0 1 6.5 5.8l6.2-3.6 3 5.2-6.5 3.8c.5 1.8.8 3.7.8 5.7v1.5h7v6h-7.7a19 19 0 0 1-2.1 5.7l6.5 3.8-3 5.2-7.2-4.2A15.8 15.8 0 0 1 35 58.4V37h-6v21.4a15.8 15.8 0 0 1-9.5-4.9l-7.2 4.2-3-5.2 6.5-3.8a19 19 0 0 1-2.1-5.7H6v-6h7v-1.5c0-2 .3-3.9.8-5.7L7.3 26l3-5.2 6.2 3.6a15.5 15.5 0 0 1 6.5-5.8v-3.1Zm6-1v3h6v-3a3 3 0 0 0-6 0Z" />
+                            </svg>
+                        </div>
+                        <div class="support-card__copy">
+                            <p class="section-label">Found a game-breaking bug?</p>
+                            <h2>Help improve the mod</h2>
+                            <p>
+                                Open an issue on the mod's github!
+                            </p>
+                        </div>
+                        <a
+                            class="button button--primary support-card__action"
+                            href="https://github.com/himstan/Jak-And-Daxter-2-Multiplayer/issues"
+                            target="_blank"
+                            rel="noreferrer"
+                            >Report an issue <span aria-hidden="true">↗</span></a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="shell footer-inner">
+                <div>
+                    <strong>Jak and Daxter II Multiplayer</strong>
+                    <p>Built on OG-Mod-Base and the OpenGOAL Jak II PC port.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#top">Back to top</a>
+                    <a
+                        href="https://github.com/himstan/Jak-And-Daxter-2-Multiplayer"
+                        target="_blank"
+                        rel="noreferrer"
+                        >GitHub</a
+                    >
+                    <a
+                        href="https://github.com/OpenGOAL-Mods/OG-Mod-Base"
+                        target="_blank"
+                        rel="noreferrer"
+                        >OG-Mod-Base</a
+                    >
+                    <a
+                        href="https://github.com/open-goal"
+                        target="_blank"
+                        rel="noreferrer"
+                        >OpenGOAL</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <dialog
+            class="lightbox"
+            data-lightbox-dialog
+            aria-label="Screenshot preview"
+        >
+            <button
+                class="lightbox-close"
+                type="button"
+                data-lightbox-close
+                aria-label="Close screenshot"
+            >
+                ×
+            </button>
+            <figure>
+                <img src="" alt="" data-lightbox-image />
+                <figcaption data-lightbox-caption></figcaption>
+            </figure>
+        </dialog>
+    </body>
+</html>
