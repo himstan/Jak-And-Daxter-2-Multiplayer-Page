@@ -195,8 +195,7 @@
                             <span class="info-number">1</span>
                             <h3>Use the same version</h3>
                             <p>
-                                Different versions may not connect or may behave
-                                differently during a session.
+                                Both players must use the same version of the game.
                             </p>
                         </article>
 
@@ -204,8 +203,7 @@
                             <span class="role-dot" aria-hidden="true"></span>
                             <h3>Jak hosts</h3>
                             <p>
-                                The host owns the save and should trigger
-                                important mission and world events.
+                                The Host player will be playing as Jak, so keep that in mind before you set up a session.
                             </p>
                         </article>
 
@@ -213,18 +211,15 @@
                             <span class="role-dot" aria-hidden="true"></span>
                             <h3>Daxter joins</h3>
                             <p>
-                                The second player connects through Find LAN or
-                                Direct Connect.
+                                The second player will be playing as Daxter, who can do pretty much everything the Jak can, other than turn into Dark Jak of course.
                             </p>
                         </article>
 
                         <article class="info-card">
                             <span class="info-number">2</span>
-                            <h3>Internet play may need setup</h3>
+                            <h3>Online play may need setup</h3>
                             <p>
-                                The host may need to allow OpenGOAL through
-                                Windows Firewall and forward the game port shown
-                                in the menu.
+                                The Host may need to forward the default 26210 port in their router.
                             </p>
                         </article>
                     </div>
@@ -239,9 +234,7 @@
                             <h2>Host a game</h2>
                         </div>
                         <p>
-                            Choose the save, wait for Daxter to connect, then
-                            lead important mission interactions once the game
-                            starts.
+                            Host the game, copy the invite token, wait for a player to connect.
                         </p>
                     </div>
 
@@ -274,7 +267,31 @@
                         <li class="step">
                             <div class="step-copy">
                                 <span class="step-number">2</span>
-                                <h3>Start a new game or load a save</h3>
+                                <h3>Choose Host LAN or Host Online</h3>
+                                <p>
+                                    Select <strong>Host LAN</strong> if playing locally,
+                                    or <strong>Host Online</strong> to play online.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/host-online-or-lan.png"
+                                data-caption="Choose Host LAN or Host Online"
+                            >
+                                <img
+                                    src="images/readme/host-online-or-lan.png"
+                                    alt="Host Online or Host LAN menu options showing"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">3</span>
+                                <h3>Choose New Game or Load Game</h3>
                                 <p>
                                     Choose <strong>New Game</strong> for a fresh
                                     run, or <strong>Load Game</strong> to
@@ -285,11 +302,11 @@
                                 <button
                                     class="screenshot"
                                     type="button"
-                                    data-lightbox="images/readme/host-new-game.png"
+                                    data-lightbox="images/readme/host-new-game-or-load-game.png"
                                     data-caption="Choose New Game or Load Game"
                                 >
                                     <img
-                                        src="images/readme/host-new-game.png"
+                                        src="images/readme/host-new-game-or-load-game.png"
                                         alt="Host Game menu showing New Game and Load Game"
                                         loading="lazy"
                                     />
@@ -313,28 +330,50 @@
 
                         <li class="step">
                             <div class="step-copy">
-                                <span class="step-number">3</span>
-                                <h3>Wait for Daxter</h3>
+                                <span class="step-number">4</span>
+                                <h3>Copy and send invite</h3>
                                 <p>
-                                    Stay on the host screen. The game continues
-                                    automatically after the second player
-                                    connects.
+                                    Select <strong>Copy Invite</strong> and send it
+                                    privately to the other player. Wait on the host
+                                    screen until they connect.
                                 </p>
                                 <p class="note">
-                                    For internet play, send the joining player
-                                    your public IP address and the port shown in
-                                    the host menu.
+                                    For online play, the Host may need to forward the default 26210 port in their router.
                                 </p>
                             </div>
                             <button
                                 class="screenshot"
                                 type="button"
-                                data-lightbox="images/readme/host-waiting-for-daxter.png"
-                                data-caption="The host waits here until Daxter connects"
+                                data-lightbox="images/readme/host-waiting-for-player.png"
+                                data-caption="Copy the invite token and wait for a player"
                             >
                                 <img
-                                    src="images/readme/host-waiting-for-daxter.png"
+                                    src="images/readme/host-waiting-for-player.png"
                                     alt="Host waiting for Daxter to connect"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">5</span>
+                                <h3>Start playing</h3>
+                                <p>
+                                    Once the client player connects, the game will automatically
+                                    continue into the selected save or new game.
+                                </p>
+                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/host-in-game.png"
+                                data-caption="The game starts once Daxter connects"
+                            >
+                                <img
+                                    src="images/readme/host-in-game.png"
+                                    alt="Host player in game after connection"
                                     loading="lazy"
                                 />
                                 <span>Enlarge</span>
@@ -352,9 +391,8 @@
                             <h2>Join a game</h2>
                         </div>
                         <p>
-                            Use Find LAN when both players are on the same
-                            network. Otherwise, connect directly with the host's
-                            address.
+                            Choose between connecting via invite token (recommended for online),
+                            scanning the local network, or direct manual connection.
                         </p>
                     </div>
 
@@ -365,7 +403,7 @@
                                 <h3>Choose Join Game</h3>
                                 <p>
                                     Start the same mod version as the host and
-                                    select <strong>Join Game</strong>.
+                                    select <strong>Join Game</strong> from the title menu.
                                 </p>
                             </div>
                             <button
@@ -376,7 +414,7 @@
                             >
                                 <img
                                     src="images/readme/client-join-game.png"
-                                    alt="Title menu with Join Game selected"
+                                    alt="Join Game menu options"
                                     loading="lazy"
                                 />
                                 <span>Enlarge</span>
@@ -386,23 +424,63 @@
                         <li class="step">
                             <div class="step-copy">
                                 <span class="step-number">2</span>
-                                <h3>Try Find LAN</h3>
+                                <h3>Option 1: With Invite Token</h3>
                                 <p>
-                                    When both players are on the same local
-                                    network, choose
-                                    <strong>Find LAN</strong> and select the
-                                    host.
+                                    Copy the host's invite string to your clipboard.
+                                    Choose <strong>With Invite Token</strong>, select
+                                    <strong>Paste Invite</strong>, and select
+                                    <strong>Connect</strong> once the invite is ready.
+                                </p>
+                            </div>
+                            <div class="screenshot-pair">
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/client-invite-not-ready.png"
+                                    data-caption="Paste invite before clipboard detection"
+                                >
+                                    <img
+                                        src="images/readme/client-invite-not-ready.png"
+                                        alt="Paste invite before clipboard detection"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                                <button
+                                    class="screenshot"
+                                    type="button"
+                                    data-lightbox="images/readme/client-invite-ready.png"
+                                    data-caption="Paste invite ready"
+                                >
+                                    <img
+                                        src="images/readme/client-invite-ready.png"
+                                        alt="Paste invite ready"
+                                        loading="lazy"
+                                    />
+                                    <span>Enlarge</span>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="step">
+                            <div class="step-copy">
+                                <span class="step-number">3</span>
+                                <h3>Option 2: Scan LAN</h3>
+                                <p>
+                                    When playing on the same local network (LAN) or local split-screen,
+                                    choose <strong>Scan LAN</strong>. The game will automatically search
+                                    for active hosts and connect.
                                 </p>
                             </div>
                             <button
                                 class="screenshot"
                                 type="button"
                                 data-lightbox="images/readme/client-find-lan.png"
-                                data-caption="Use Find LAN on the same local network"
+                                data-caption="Scan LAN to search for local hosts"
                             >
                                 <img
                                     src="images/readme/client-find-lan.png"
-                                    alt="Join Game menu with Find LAN selected"
+                                    alt="Join Game menu with Find LAN / Scan LAN selected"
                                     loading="lazy"
                                 />
                                 <span>Enlarge</span>
@@ -411,105 +489,58 @@
 
                         <li class="step">
                             <div class="step-copy">
-                                <span class="step-number">3</span>
-                                <h3>Use Direct Connect</h3>
+                                <span class="step-number">4</span>
+                                <h3>Option 3: Direct Connect</h3>
                                 <p>
-                                    If LAN discovery does not find the game,
-                                    choose <strong>Direct Connect</strong> and
-                                    enter the address and port provided by the
-                                    host.
+                                    (<strong>Note:</strong> All fields support CTRL+V paste)<br>
+                                    To connect manually, choose <strong>Direct Connect</strong>, verify or
+                                    update the target <strong>Address</strong> and <strong>Port</strong>,
+                                    then select <strong>Connect</strong>.
                                 </p>
                             </div>
-                            <div class="screenshot-pair">
-                                <button
-                                    class="screenshot"
-                                    type="button"
-                                    data-lightbox="images/readme/client-direct-connect.png"
-                                    data-caption="Choose Direct Connect when LAN discovery is unavailable"
-                                >
-                                    <img
-                                        src="images/readme/client-direct-connect.png"
-                                        alt="Join Game menu with Direct Connect selected"
-                                        loading="lazy"
-                                    />
-                                    <span>Enlarge</span>
-                                </button>
-                                <button
-                                    class="screenshot"
-                                    type="button"
-                                    data-lightbox="images/readme/client-connect-game.png"
-                                    data-caption="Enter the host address and port, then connect"
-                                >
-                                    <img
-                                        src="images/readme/client-connect-game.png"
-                                        alt="Direct Connect menu with Connect selected"
-                                        loading="lazy"
-                                    />
-                                    <span>Enlarge</span>
-                                </button>
-                            </div>
+                            <button
+                                class="screenshot"
+                                type="button"
+                                data-lightbox="images/readme/client-direct-connect.png"
+                                data-caption="Direct Connect menu to manually specify address and port"
+                            >
+                                <img
+                                    src="images/readme/client-direct-connect.png"
+                                    alt="Direct Connect settings menu"
+                                    loading="lazy"
+                                />
+                                <span>Enlarge</span>
+                            </button>
                         </li>
                     </ol>
 
                     <div class="address-guide">
                         <div>
-                            <p class="section-label">Entering the address</p>
-                            <h3>Use the keyboard to type</h3>
+                            <p class="section-label">Using an Invite</p>
+                            <h3>Online invite token</h3>
                             <p>
-                                Select the <strong>Address</strong> or
-                                <strong>Port</strong> field with
-                                <span
-                                    class="ps2-button"
-                                    role="img"
-                                    aria-label="the PlayStation 2 X button"
-                                >
-                                    <svg
-                                        viewBox="0 0 32 32"
-                                        aria-hidden="true"
-                                        focusable="false"
-                                    >
-                                        <path
-                                            d="M8.5 5.7 16 13.2l7.5-7.5 2.8 2.8-7.5 7.5 7.5 7.5-2.8 2.8-7.5-7.5-7.5 7.5-2.8-2.8 7.5-7.5-7.5-7.5z"
-                                        />
-                                    </svg>
-                                </span>
-                                on a controller, or <kbd>Space</kbd> on a
-                                keyboard. Type the value, then press the same
-                                button again to finish editing.
+                                Online invites use the format: <code>address:port/token</code>. Do not post an
+                                invite publicly as it contains the host's public IP address! It is a
+                                temporary credential for the current hosting session.
                             </p>
                             <p class="note">
-                                An invalid IP address is shown in red.
+                                Once connected, you will join the game session as <strong>Daxter</strong>!
                             </p>
                         </div>
 
-                        <div class="screenshot-pair">
-                            <button
-                                class="screenshot"
-                                type="button"
-                                data-lightbox="images/readme/client-valid-ip.png"
-                                data-caption="A correctly formatted IP address"
-                            >
-                                <img
-                                    src="images/readme/client-valid-ip.png"
-                                    alt="Direct Connect menu with a valid IP address entered"
-                                    loading="lazy"
-                                />
-                                <span>Enlarge</span>
-                            </button>
-                            <button
-                                class="screenshot"
-                                type="button"
-                                data-lightbox="images/readme/client-invalid-ip.png"
-                                data-caption="Invalid IP addresses are highlighted in red"
-                            >
-                                <img
-                                    src="images/readme/client-invalid-ip.png"
-                                    alt="Direct Connect menu showing an invalid IP address"
-                                    loading="lazy"
-                                />
-                                <span>Enlarge</span>
-                            </button>
-                        </div>
+                        <button
+                            class="screenshot"
+                            type="button"
+                            data-lightbox="images/readme/client-in-game.png"
+                            data-caption="Connected player in game as Daxter"
+                        >
+                            <img
+                                src="images/readme/client-in-game.png"
+                                alt="Client player in game as Daxter"
+                                loading="lazy"
+                            />
+                            <span>Enlarge</span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -533,7 +564,7 @@
                         <p>
                             Run two windowed game instances side by side on the
                             same monitor. Host in one window, then choose
-                            <strong>Join Game → Find LAN</strong> in the other.
+                            <strong>Join Game → Scan LAN</strong> in the other.
                         </p>
                         <p>
                             Each instance should recognize a connected
@@ -557,12 +588,10 @@
                             class="troubleshooting-card troubleshooting-card--wide"
                         >
                             <div>
-                                <h3>Something looks broken for Daxter</h3>
+                                <h3>Anything looks desynced or broken on the client side?</h3>
                                 <p>
-                                    Use <strong>Reconnect</strong>. It is
-                                    currently the quickest fix for most
-                                    client-side desyncs, visual problems, and
-                                    soft-locks.
+                                    The <strong>Reconnect</strong> button is going to act as your primary safeline
+                                    while playing this mod, so don't be afraid to use it!
                                 </p>
                             </div>
                             <button
@@ -573,7 +602,7 @@
                             >
                                 <img
                                     src="images/readme/client-reconnect.png"
-                                    alt="Reconnect button for the client"
+                                    alt="Reconnect button for the Client"
                                     loading="lazy"
                                 />
                                 <span>Enlarge</span>
@@ -581,23 +610,19 @@
                         </article>
 
                         <article class="troubleshooting-card">
-                            <h3>Daxter cannot connect</h3>
+                            <h3>The client cannot find the host</h3>
                             <ul>
                                 <li>
-                                    Make sure both players use the same mod
-                                    version.
+                                    Make sure both players are using the same version
+                                    of the mod.
                                 </li>
                                 <li>
-                                    Allow OpenGOAL through Windows Firewall on
-                                    the host PC.
+                                    Check Windows Firewall on the host machine and allow
+                                    the game/OpenGOAL through it.
                                 </li>
                                 <li>
-                                    For internet play, forward the port shown in
-                                    the game menu.
-                                </li>
-                                <li>
-                                    Check that the public IP address was entered
-                                    correctly.
+                                    For online play, the host should forward the UDP
+                                    port <strong>26210</strong> on their router.
                                 </li>
                             </ul>
                         </article>
@@ -608,10 +633,8 @@
                                 <li>
                                     If the host leaves, the session is over.
                                 </li>
-                                <li>Host the same save again.</li>
                                 <li>
-                                    Have Daxter reconnect using the same
-                                    address.
+                                    Start hosting again and have the client reconnect.
                                 </li>
                             </ul>
                         </article>
@@ -659,7 +682,7 @@
                         <details>
                             <summary>Limited testing</summary>
                             <p>
-                                The campaign has not been tested in every
+                                The mod has not been tested in every
                                 possible situation. Reproducible bugs and
                                 game-breaking issues can be reported on GitHub.
                             </p>
