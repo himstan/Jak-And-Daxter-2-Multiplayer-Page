@@ -107,7 +107,7 @@
             <section class="hero" id="top">
                 <div class="shell hero-layout">
                     <div class="hero-copy">
-                        <p class="eyebrow">Two-player mod for OpenGOAL</p>
+                        <p class="eyebrow">Two-player co-op mod for Jak II (OpenGOAL)</p>
                         <img
                             class="hero-logo"
                             src="images/jad2mp-title.png"
@@ -183,11 +183,6 @@
                     <div class="section-heading">
                         <p class="section-label">Before playing</p>
                         <h2>A few things to check first</h2>
-                        <p>
-                            The OpenGOAL launcher handles installation. Both
-                            players only need to make sure they are launching
-                            the same mod version.
-                        </p>
                     </div>
 
                     <div class="info-grid">
@@ -211,7 +206,7 @@
                             <span class="role-dot" aria-hidden="true"></span>
                             <h3>Daxter joins</h3>
                             <p>
-                                The second player will be playing as Daxter, who can do pretty much everything the Jak can, other than turn into Dark Jak of course.
+                                The second player will be playing as Daxter, who can do pretty much everything the Jak can. (Other than turn into Dark Jak :c)
                             </p>
                         </article>
 
@@ -219,7 +214,7 @@
                             <span class="info-number">2</span>
                             <h3>Online play may need setup</h3>
                             <p>
-                                The Host may need to forward the default 26210 port in their router.
+                                The Host may need to manually forward the default 26210 port if they have UPnP disabled on their router.
                             </p>
                         </article>
                     </div>
@@ -339,6 +334,10 @@
                                 </p>
                                 <p class="note">
                                     For online play, the Host may need to forward the default 26210 port in their router.
+                                </p>
+                                <p class="note">
+                                    If the <strong>Copy Invite</strong> stays red, then it probably means that the automatic port mapping has failed, and the <strong>26210</strong> port is not forwarded.
+                                    I suggest using a VPN solution like Hamachi or Tailscale to fake LAN play. Host LAN and join Direct to their assigned IP address. You don't need an invite token for LAN play.
                                 </p>
                             </div>
                             <button
@@ -497,6 +496,9 @@
                                     update the target <strong>Address</strong> and <strong>Port</strong>,
                                     then select <strong>Connect</strong>.
                                 </p>
+                                <p class="note">
+                                    The <strong>Token</strong> is not used for LAN play. <br>So if you join your friend using their Hamachi/Tailscale Ip, you just copy their ip and paste it in here, and you should be set!
+                                </p>
                             </div>
                             <button
                                 class="screenshot"
@@ -624,6 +626,9 @@
                                     For online play, the host should forward the UDP
                                     port <strong>26210</strong> on their router.
                                 </li>
+                                <li>
+                                    If all fails, then try Hamachi or Tailscale or any VPN solution, and play "LAN"!
+                                </li>
                             </ul>
                         </article>
 
@@ -655,6 +660,12 @@
                     </div>
 
                     <div class="limitations-list">
+                        <details open>
+                            <summary>Random crashes</summary>
+                            <p>
+                                There's a couple of random crashes, so expect that, especially on the non-host Daxter side.
+                            </p>
+                        </details>
                         <details open>
                             <summary>Remote animations</summary>
                             <p>
